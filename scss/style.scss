@@ -1,0 +1,30 @@
+@import 'reset';
+@import 'ux';
+@import 'header';
+@import 'index';
+@import 'footer';
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1250px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
