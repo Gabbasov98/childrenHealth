@@ -45,6 +45,11 @@
       .header__link img {
         margin-right: 11px;
         width: 13px; } }
+  @media screen and (max-width: 360px) {
+    .header__link {
+      font-size: 10px; }
+      .header__link img {
+        margin-right: 5px; } }
 @media screen and (max-width: 768px) {
   .header__time {
     display: none; } }
@@ -87,7 +92,8 @@
     background: rgba(236, 249, 255, 0.95);
     backdrop-filter: blur(25px);
     width: 210px;
-    border-top: 2px solid #D6F2FF; }
+    border-top: 2px solid #D6F2FF;
+    z-index: 5; }
   .nav__item-show {
     display: flex;
     cursor: pointer; }

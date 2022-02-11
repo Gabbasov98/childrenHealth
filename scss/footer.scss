@@ -3,6 +3,7 @@
     background-size: cover;
     color: #5C5C5C;
     padding: 68px 0;
+    margin-top: 70px;
     &__inner {
         display: flex;
         align-items: center;
@@ -49,6 +50,7 @@
 
 @media screen and (max-width: 992px) {
     .footer {
+        margin-top: 40px;
         padding: 48px 0;
         text-align: center;
         &__inner {

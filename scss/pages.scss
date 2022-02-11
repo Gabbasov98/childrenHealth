@@ -1,0 +1,345 @@
+.contacts {
+    &__inner {
+        display: flex;
+    }
+    &__left {
+        width: 360px;
+        flex-shrink: 0;
+        margin-right: 140px;
+        @media screen and (max-width: 1200px) {
+            margin-right: 40px;
+        }
+    }
+    &__right {
+        width: calc(100% - 500px);
+        @media screen and (max-width: 1200px) {
+            width: calc(100% - 400px);
+        }
+    }
+    &__group {
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 32px;
+    }
+    &__item {
+        font-size: 18px;
+        line-height: 160%;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: 500;
+        }
+        a:hover {
+            color: #009BE3;
+        }
+    }
+    &__map {
+        height: 350px;
+    }
+    &__images {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    &__img {
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.analiz {
+    padding-bottom: 70px;
+    @media screen and (max-width: 992px) {
+        padding-bottom: 40px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    }
+    &__search {
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    &__items {
+        margin-top: 80px;
+        @media screen and (max-width: 992px) {
+            margin-top: 25px;
+        }
+    }
+    &__item {
+        margin-top: 30px;
+        @media screen and (max-width: 992px) {
+            margin-top: 11px;
+        }
+    }
+}
+
+.doctors {
+    padding-bottom: 70px;
+    @media screen and (max-width: 992px) {
+        padding-bottom: 40px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    }
+    &__select {
+        width: 270px;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+    }
+    .index-doctors__items {
+        margin-top: 85px;
+        @media screen and (max-width: 992px) {
+            margin-top: 32px;
+        }
+        @media screen and (max-width: 450px) {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .doctor-card {
+            &__top {
+                height: unset;
+            }
+            &__expirience {
+                height: 44px;
+                font-size: 16px;
+                padding: 0 14px;
+            }
+            &__bottom {
+                padding: 25px;
+            }
+            &__name,
+            &__prof {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &__prof {
+                margin-top: 12px;
+            }
+        }
+    }
+}
+
+.gallery {
+    padding-bottom: 70px;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 85px;
+    }
+    &__tabs {
+        display: flex;
+        align-items: center;
+    }
+    &__tab {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 22px;
+        color: #B9B9B9;
+        transition: all .3s;
+        &:hover {
+            color: #1C1C1C;
+            cursor: pointer;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            background-color: #B9B9B9;
+            width: 1px;
+            height: 100%;
+            right: 0;
+            opacity: 0;
+        }
+        &:not(:last-child) {
+            padding-right: 28px;
+            margin-right: 28px;
+            &:before {
+                opacity: 1;
+            }
+        }
+        &--active {
+            color: #1C1C1C;
+            pointer-events: none;
+        }
+    }
+    &__content {
+        display: none;
+        &--active {
+            display: block;
+        }
+    }
+    &-photo__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (max-width: 1200px) {
+            gap: 18px;
+        }
+    }
+    &-video__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.about {
+    padding-bottom: 70px;
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    }
+    &__img {
+        width: 100%;
+        margin: 32px 0;
+    }
+    p {
+        font-size: 18px;
+        line-height: 160%;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__wrap {
+        display: flex;
+        .about-clinic__card {
+            margin-right: 0;
+            margin-left: 30px;
+            width: 470px;
+            @media screen and (min-width: 992px) {
+                &-bottom {
+                    padding: 19px 29px;
+                }
+                &-prof,
+                &-name {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                &-name {
+                    margin-top: 7px;
+                }
+                &-link {
+                    font-size: 13.3333px;
+                    line-height: 16px;
+                    margin-top: 23px;
+                }
+            }
+            @media screen and (max-width: 520px) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contacts {
+        &__inner {
+            display: block;
+        }
+        &__left {
+            width: 100%;
+            margin: 0;
+        }
+        &__right {
+            width: 100%;
+            margin-top: 32px;
+        }
+        &__group {
+            margin-bottom: 32px;
+        }
+        &__title {
+            font-size: 22px;
+            &-mob {
+                display: none;
+            }
+        }
+        &__item {
+            font-size: 16px;
+        }
+        &__images {
+            gap: 12px;
+            margin-top: 12px;
+        }
+        &__map {
+            height: 450px;
+            @media screen and (max-width: 768px) {
+                height: 230px;
+            }
+        }
+    }
+    .gallery {
+        &__top {
+            margin-bottom: 32px;
+        }
+        &__title {
+            display: none;
+        }
+        &-photo__wrap {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .about {
+        padding-bottom: 40px;
+        &__img {
+            margin-top: 0;
+        }
+        &__wrap {
+            flex-wrap: wrap;
+            .about-clinic__card {
+                order: -1;
+                margin-left: 0;
+                margin-bottom: 32px;
+            }
+        }
+        p {
+            font-size: 16px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
