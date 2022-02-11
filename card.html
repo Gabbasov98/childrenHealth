@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/select2.css">
+    <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="scss/card.css">
     <title>Карточка врача</title>
@@ -95,6 +95,16 @@
         </header>
 
         <div class="content">
+            <section class='breadcrumbs'>
+                <div class='container'>
+                    <div class='breadcrumbs__wrap'>
+                        <a href="" class="breadcrumbs__item">Главная</a>
+                        <a href="" class="breadcrumbs__item">Специалисты</a>
+                        <span class="breadcrumbs__item"> Имя Фамилия</span>
+                    </div>
+                </div>
+            </section>
+
             <section class="card">
                 <div class="container">
                     <div class="card__inner">
@@ -145,39 +155,100 @@
                                             <span class="card__time">13:00-15:00</span>
                                         </div>
                                     </div>
-                                    <button class="card__reception-btn">Записаться на приём</button>
+                                    <button class="card__reception-btn btn btn-blue-outline">Записаться на приём</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card__items">
-                        <div class="card__item">
-                            <div class="card__item-show">
-                                <div class="card__item-title">Образование врача</div>
-                                <button class="card__item-btn">
-                                    <span>Показать все</span>
-                                    <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.462 0L8.28079 8.99754L0.0996094 0L16.462 0Z" fill="#B9B9B9"/>
-                                    </svg>
-                                </button>
+                    <div class='doctor-info__group'>
+                        <div class="doctor-info__group-show">
+                            <div class="doctor-info__group-title">Образование врача</div>
+                            <button class="doctor-info__group-btn btn">
+                                <span class="doctor-info__group-btn-show">Показать все</span>
+                                <span class="doctor-info__group-btn-hide">Свернуть</span>
+                                <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.462 0L8.28079 8.99754L0.0996094 0L16.462 0Z" fill="#B9B9B9"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="doctor-info__items">
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
                             </div>
-                            <div class="card__item-hide">
-                                <div class="card__hide-desc">
-                                    <span class="card__hide-span">1990</span>
-                                    <p class="card__hide-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
-                                </div>
-                                <div class="card__hide-desc">
-                                    <span class="card__hide-span">1995</span>
-                                    <p class="card__hide-text">Ut efficitur lacus molestie quam interdum, non tincidunt dolor ornare.</p>
-                                </div>
-                                <div class="card__hide-desc">
-                                    <span class="card__hide-span">1990</span>
-                                    <p class="card__hide-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
-                                </div>
-                                <div class="card__hide-desc">
-                                    <span class="card__hide-span">1995</span>
-                                    <p class="card__hide-text">Ut efficitur lacus molestie quam interdum, non tincidunt dolor ornare.</p>
-                                </div>
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='doctor-info__group'>
+                        <div class="doctor-info__group-show">
+                            <div class="doctor-info__group-title">Повышение квалификации</div>
+                            <button class="doctor-info__group-btn btn">
+                                <span class="doctor-info__group-btn-show">Показать все</span>
+                                <span class="doctor-info__group-btn-hide">Свернуть</span>
+                                <svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.462 0L8.28079 8.99754L0.0996094 0L16.462 0Z" fill="#B9B9B9"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="doctor-info__items">
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
+                            </div>
+                            <div class="doctor-info__item doctor-info__item--hidden">
+                                <span class="doctor-info__item-year">1990</span>
+                                <p class="doctor-info__item-text">Fusce a eros et ligula malesuada dapibus. Integer pretium.</p>
                             </div>
                         </div>
                     </div>
@@ -211,9 +282,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/swiper.js"></script>
-    <script src="js/select2.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/index.js"></script>
-    <script src="main.js"></script>
 </body>
 
 </html>

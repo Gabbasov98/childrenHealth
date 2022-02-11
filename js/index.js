@@ -152,6 +152,27 @@ $(document).ready(function() {
         closeEffect: 'none'
     });
 
+    $(".doctor-info__group-btn").click(function() {
+        $(this).toggleClass("doctor-info__group-btn--active")
+        $(this).parents(".doctor-info__group-show").siblings(".doctor-info__items").children(".doctor-info__item--hidden").toggleClass("doctor-info__item--show")
+    })
+
+
+    $(".services__sidebar-open").click(function() {
+        $("body").toggleClass("fixed-body")
+        $(".services__sidebar-nav").toggleClass("services__sidebar-nav--active")
+        $(".services__sidebar-bg").toggleClass("services__sidebar-bg--active")
+        $('html, body').animate({
+            scrollTop: 0
+        }, 0);
+    })
+
+    $(".services__sidebar-bg").click(function() {
+        $(this).removeClass("services__sidebar-bg--active")
+        $("body").removeClass("fixed-body")
+        $(".services__sidebar-nav").removeClass("services__sidebar-nav--active")
+        $(".services__sidebar-open").removeClass("services__sidebar-open--active")
+    })
 })
 
 
