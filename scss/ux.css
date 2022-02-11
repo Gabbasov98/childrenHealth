@@ -51,7 +51,8 @@ input::placeholder {
   font-size: 14px;
   color: #FFFFFF; }
   .btn-green:hover {
-    background: rgba(64, 170, 41, 0.9); }
+    background: rgba(64, 170, 41, 0.9);
+    color: #FFFFFF; }
 
 .breadcrumbs__title {
   font-size: 34px;
