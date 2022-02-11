@@ -2916,6 +2916,300 @@ input::placeholder {
     margin-top: 0;
   }
 }
+.card {
+  padding-bottom: 70px;
+}
+.card__inner {
+  display: flex;
+}
+.card__title-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.card__span {
+  font-size: 18px;
+  line-height: 22px;
+  color: #009BE3;
+  display: block;
+}
+.card__left {
+  width: 335px;
+  margin-right: 65px;
+  flex-shrink: 0;
+}
+.card__right {
+  width: calc(100% - 400px);
+  flex-shrink: 0;
+}
+.card__title-bold {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1C1C1C;
+  margin-bottom: 10px;
+}
+.card__title {
+  font-size: 24px;
+  line-height: 29px;
+  color: #1C1C1C;
+}
+.card__desc {
+  margin-bottom: 80px;
+}
+.card__text {
+  font-size: 16px;
+  line-height: 160%;
+  color: #5C5C5C;
+}
+.card__text:not(:last-child) {
+  margin-bottom: 20px;
+}
+.card__prodoctorov {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__reviews {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 40px;
+}
+.card__reviews-desc {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 148.2%;
+  color: #009BE3;
+}
+.card__reviews-desc span {
+  color: #5C5C5C;
+  font-weight: normal;
+  padding-left: 2px;
+}
+.card__reviews-link {
+  margin-left: 30px;
+}
+.card__reviews-link span {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #009BE3;
+  margin-right: 10px;
+}
+.card__description-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 148.2%;
+  color: #009BE3;
+}
+.card__description-text span {
+  color: #5C5C5C;
+  font-weight: normal;
+}
+.card__reception-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.card__day-item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 148.19%;
+  color: #5C5C5C;
+  display: block;
+  flex-grow: 1;
+}
+.card__day-item:not(:last-child) {
+  margin-right: 28px;
+  padding-right: 28px;
+  position: relative;
+}
+.card__day-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #009BE3;
+}
+.card__day {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 148.19%;
+  color: #009BE3;
+  display: block;
+}
+.card__day--active {
+  color: #5C5C5C;
+}
+.card__time {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 148.19%;
+  color: #009BE3;
+  display: block;
+}
+.card__time--active {
+  color: #5C5C5C;
+}
+.card__reception-btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 0;
+  font-size: 16px;
+}
+
+.doctor-info__group {
+  margin-top: 80px;
+}
+.doctor-info__group-show {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+.doctor-info__group-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 50px;
+}
+.doctor-info__group-btn {
+  font-size: 18px;
+  line-height: 22px;
+}
+.doctor-info__group-btn--active .doctor-info__group-btn-hide {
+  display: unset;
+}
+.doctor-info__group-btn--active .doctor-info__group-btn-show {
+  display: none;
+}
+.doctor-info__group-btn--active svg {
+  transform: rotate(180deg);
+}
+.doctor-info__group-btn span {
+  text-decoration-line: underline;
+  margin-right: 15px;
+}
+.doctor-info__group-btn-hide {
+  display: none;
+}
+.doctor-info__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 13px 0;
+  border-bottom: 1px solid #B9B9B9;
+}
+.doctor-info__item-year {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 148.19%;
+  margin-right: 50px;
+}
+.doctor-info__item-text {
+  font-size: 16px;
+  line-height: 160%;
+  color: #5C5C5C;
+}
+.doctor-info__item--hidden {
+  display: none;
+}
+.doctor-info__item--show {
+  display: flex !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .card__prodoctorov {
+    display: block;
+  }
+  .card__description {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card {
+    padding-bottom: 45px;
+  }
+  .card__inner {
+    display: block;
+  }
+  .card__left {
+    width: 450px;
+  }
+  .card__img img {
+    width: 100%;
+  }
+  .card__right {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .card__title-bold {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  .card__title-desc {
+    margin-bottom: 30px;
+  }
+  .card__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .card__span {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .card__desc {
+    margin-bottom: 30px;
+  }
+  .card__text {
+    font-size: 12px;
+  }
+  .card__description {
+    margin-bottom: 50px;
+  }
+  .card__reviews {
+    margin-bottom: 14px;
+  }
+  .card__day-item:not(:last-child) {
+    margin-right: 17px;
+    padding-right: 17px;
+  }
+
+  .doctor-info__group-show {
+    display: block;
+    margin-bottom: 17px;
+  }
+  .doctor-info__group-btn {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+  .doctor-info__group-btn span {
+    margin-right: 10px;
+  }
+  .doctor-info__item-year {
+    font-size: 12px;
+    margin-right: 57px;
+  }
+  .doctor-info__item-text {
+    font-size: 12px;
+  }
+  .doctor-info__group {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .card__left {
+    width: 100%;
+  }
+}
 .services {
   padding-bottom: 700px;
 }
