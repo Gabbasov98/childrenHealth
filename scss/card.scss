@@ -18,9 +18,11 @@
     &__left {
         width: 335px;
         margin-right: 65px;
+        flex-shrink: 0;
     }
     &__right {
         width: calc(100% - 400px);
+        flex-shrink: 0;
     }
     &__title-bold {
         font-weight: bold;
@@ -100,6 +102,7 @@
         line-height: 148.19%;
         color: #5C5C5C;
         display: block;
+        flex-grow: 1;
         &:not(:last-child) {
             margin-right: 28px;
             padding-right: 28px;
@@ -203,6 +206,102 @@
         }
         &--show {
             display: flex !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .card {
+        &__prodoctorov {
+            display: block;
+        }
+        &__description {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        padding-bottom: 45px;
+        &__inner {
+            display: block;
+        }
+        &__left {
+            width: 450px;
+        }
+        &__img {
+            img {
+                width: 100%;
+            }
+        }
+        &__right {
+            width: 100%;
+            margin-top: 30px;
+        }
+        &__title-bold {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 12px;
+        }
+        &__title-desc {
+            margin-bottom: 30px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__span {
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__desc {
+            margin-bottom: 30px;
+        }
+        &__text {
+            font-size: 12px;
+        }
+        &__description {
+            margin-bottom: 50px;
+        }
+        &__reviews {
+            margin-bottom: 14px;
+        }
+        &__day-item:not(:last-child) {
+            margin-right: 17px;
+            padding-right: 17px;
+        }
+    }
+    .doctor-info {
+        &__group-show {
+            display: block;
+            margin-bottom: 17px;
+        }
+        &__group-btn {
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 10px;
+            span {
+                margin-right: 10px;
+            }
+        }
+        &__item-year {
+            font-size: 12px;
+            margin-right: 57px;
+        }
+        &__item-text {
+            font-size: 12px;
+        }
+        &__group {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .card {
+        &__left {
+            width: 100%;
         }
     }
 }
