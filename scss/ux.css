@@ -54,6 +54,7 @@ input::placeholder {
     background: rgba(64, 170, 41, 0.9);
     color: #FFFFFF; }
 
+<<<<<<< HEAD
 .btn-blue-outline {
   border: 2px solid #009BE3;
   border-radius: 15px;
@@ -65,6 +66,44 @@ input::placeholder {
   padding: 0 35px; }
   .btn-blue-outline:hover {
     background-color: #009BE3;
+=======
+.breadcrumbs__title {
+  font-size: 34px;
+  line-height: 120%;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff; }
+  .breadcrumbs__title-lowercase {
+    text-transform: unset;
+    font-size: 28px; }
+  @media screen and (max-width: 370px) {
+    .breadcrumbs__title {
+      max-width: 230px; } }
+.breadcrumbs__wrap {
+  margin-top: 20px;
+  flex-wrap: wrap; }
+  .breadcrumbs__wrap a:hover {
+    color: #ffffff; }
+.breadcrumbs__item {
+  font-size: 12px;
+  line-height: 140%;
+  color: #97ccf1;
+  position: relative; }
+  .breadcrumbs__item:not(:first-child) {
+    margin-left: 15px;
+    padding-left: 15px; }
+    .breadcrumbs__item:not(:first-child):before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      width: 2px;
+      height: 12px;
+      background-color: #3f8bc5;
+      top: 2px;
+      left: -1px; }
+  .breadcrumbs__item:last-child {
+>>>>>>> 3418d3f68bed85a25d2e922b4b6656a95ae6c006
     color: #fff; }
 
 .btn-green-outline {
