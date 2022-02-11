@@ -132,12 +132,28 @@ $(document).ready(function() {
     })
 
 
-    $(".gallery__tab").click(function() {
+    $(".tab").click(function() {
         let path = $(this).attr("data-tab-path")
-        $(".gallery__tab").removeClass("gallery__tab--active")
-        $(this).addClass("gallery__tab--active")
-        $(".gallery__content").removeClass("gallery__content--active")
-        $(`.gallery__content[data-tab-path="${path}"]`).addClass("gallery__content--active")
+        $(".tab").removeClass("tab--active")
+        $(this).addClass("tab--active")
+        $(".tab__content").removeClass("tab__content--active")
+        $(`.tab__content[data-tab-path="${path}"]`).addClass("tab__content--active")
+        $(".mob-tabs__item").removeClass("mob-tabs__item--active")
+        $(`.mob-tabs__item[data-tab-path="${path}"]`).addClass("mob-tabs__item--active")
+        $(".mob-tabs__bg").removeClass("mob-tabs__bg--active")
+        $(".tabs").removeClass("tabs--active")
+
+
+    })
+
+    $(".mob-tabs").click(function() {
+        $(".mob-tabs__bg").addClass("mob-tabs__bg--active")
+        $(".tabs").addClass("tabs--active")
+    })
+
+    $(".mob-tabs__bg").click(function() {
+        $(this).removeClass("mob-tabs__bg--active")
+        $(".tabs").removeClass("tabs--active")
     })
 
     $(".various").fancybox({

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Menu</title>
+</head>
+
+<style>
+    .wrapper {
+        padding: 50px;
+    }
+    
+    .wrapper a {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .wrapper button {
+        margin-bottom: 20px;
+        width: 250px;
+        height: 45px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper">
+        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal1'>Open Modal 1</button>
+        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal2'>Open Modal 2</button>
+        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal3'>Open Modal 3</button>
+        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal4'>Open Modal 4</button>
+        <button type='button' class='btn btn-info btn-lg' data-toggle='modal' data-target='#modal5'>Open Modal 5</button>
+
+
+    </div>
+
+    <div id='modal1' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+            <button type='button' class='modal__close' data-dismiss='modal'>
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="22.5642" width="31.9102" height="3.54558" transform="rotate(-45 0 22.5642)" fill="#B9B9B9"/>
+                    <rect x="2.50781" width="31.9102" height="3.54558" transform="rotate(45 2.50781 0)" fill="#B9B9B9"/>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Мы ждём вас!</div>
+                <form action="" class="modal__form">
+                    <fieldset class='modal__form-group form-group'>
+                        <label>Специализация врача</label>
+                        <select class="select select2">
+                           <option>Скажу администратору</option>
+                           <option>Педиатр</option>
+                           <option>Невролог</option>
+                           <option>Кардиолог</option>
+                           <option>Эндокринолог</option>
+                           <option>ЛОР</option>
+                           <option>Ортопед/
+                            Травмотолог</option>
+                       </select>
+                    </fieldset>
+                    <fieldset class='modal__form-group form-group'>
+                        <label>Дата и время</label>
+                        <select class="select select2">
+                            <option>Скажу администратору</option>
+                            <option>Четверг 22.01.2022 в 12:30</option>
+                            <option>Пятница 23.01.2022 в 12:30</option>
+                            <option>Суббота 24.01.2022 в 12:30</option>
+                            <option>Воскресенье 25.01.2022 в 12:30</option>
+                            <option>Понедельник 26.01.2022 в 12:30</option>
+                            <option>Вторник 27.01.2022 в 12:30</option>
+                            <option>Среда 28.01.2022 в 12:30</option>
+                        </select>
+                    </fieldset>
+                    <div class="modal__form-groups">
+                        <fieldset class='modal__form-group form-group'>
+                            <label>Ваши данные</label>
+                            <input type='text' placeholder="Имя" />
+                        </fieldset>
+                        <fieldset class='modal__form-group form-group'>
+                            <input type='tel' placeholder="Номер телефона" />
+                        </fieldset>
+                    </div>
+                    <button class="modal__form-btn btn btn-green">Записаться на приём</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id='modal2' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+            <button type='button' class='modal__close' data-dismiss='modal'>
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="22.5642" width="31.9102" height="3.54558" transform="rotate(-45 0 22.5642)" fill="#B9B9B9"/>
+                    <rect x="2.50781" width="31.9102" height="3.54558" transform="rotate(45 2.50781 0)" fill="#B9B9B9"/>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Мы ждём вас!</div>
+                <form action="" class="modal__form">
+                    <fieldset class='modal__form-group form-group'>
+                        <label>Специализация врача</label>
+                        <select class="select select2">
+                           <option>Скажу администратору</option>
+                           <option>Педиатр</option>
+                           <option>Невролог</option>
+                           <option>Кардиолог</option>
+                           <option>Эндокринолог</option>
+                           <option>ЛОР</option>
+                           <option>Ортопед/
+                            Травмотолог</option>
+                       </select>
+                    </fieldset>
+                    <fieldset class='modal__form-group form-group'>
+                        <label>Врач</label>
+                        <input type='text' placeholder="Врач" />
+                    </fieldset>
+                    <fieldset class='modal__form-group form-group'>
+                        <label>Дата и время</label>
+                        <input type='text' placeholder="Врач" class="date-input" />
+                    </fieldset>
+                    <div class="modal__form-groups">
+                        <fieldset class='modal__form-group form-group'>
+                            <label>Ваши данные</label>
+                            <input type='text' placeholder="Имя" />
+                        </fieldset>
+                        <fieldset class='modal__form-group form-group'>
+                            <input type='tel' placeholder="Номер телефона" />
+                        </fieldset>
+                    </div>
+                    <button class="modal__form-btn btn btn-green">Записаться на приём</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id='modal3' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+            <button type='button' class='modal__close' data-dismiss='modal'>
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="22.5642" width="31.9102" height="3.54558" transform="rotate(-45 0 22.5642)" fill="#B9B9B9"/>
+                    <rect x="2.50781" width="31.9102" height="3.54558" transform="rotate(45 2.50781 0)" fill="#B9B9B9"/>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Выберите день</div>
+                <div class="modal__calendar">
+                    <div class="modal__calendar-nav">
+                        <div class="modal__calendar-month">
+                            <button class="modal__calendar-month-prev btn">
+                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99707 16.3624L-0.000467896 8.18118L8.99707 0L8.99707 16.3624Z" fill="#5C5C5C"/>
+                                </svg>
+                            </button>
+                            <span class="modal__calendar-month-title">Январь</span>
+                            <button class="modal__calendar-month-next btn">
+                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M-7.15222e-07 16.3624L8.99754 8.18118L0 0L-7.15222e-07 16.3624Z" fill="#5C5C5C"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="modal__calendar-year">
+                            <button class="modal__calendar-year-prev btn">
+                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.99707 16.3624L-0.000467896 8.18118L8.99707 0L8.99707 16.3624Z" fill="#5C5C5C"/>
+                                </svg>
+                            </button>
+                            <span class="modal__calendar-year-title">2022</span>
+                            <button class="modal__calendar-year-next btn">
+                                <svg width="9" height="17" viewBox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M-7.15222e-07 16.3624L8.99754 8.18118L0 0L-7.15222e-07 16.3624Z" fill="#5C5C5C"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal__calendar-days">
+                        <span class="modal__calendar-day">Пн</span>
+                        <span class="modal__calendar-day">Вт</span>
+                        <span class="modal__calendar-day">Ср</span>
+                        <span class="modal__calendar-day">Чт</span>
+                        <span class="modal__calendar-day">Пт</span>
+                        <span class="modal__calendar-day">Сб</span>
+                        <span class="modal__calendar-day">Вс</span>
+                    </div>
+                    <div class="modal__calendar-items">
+                        <div class="modal__calendar-row">
+                            <div class="modal__calendar-item">1</div>
+                            <div class="modal__calendar-item">2</div>
+                        </div>
+                        <div class="modal__calendar-row">
+                            <div class="modal__calendar-item">3</div>
+                            <div class="modal__calendar-item">4</div>
+                            <div class="modal__calendar-item">5</div>
+                            <div class="modal__calendar-item">6</div>
+                            <div class="modal__calendar-item">7</div>
+                            <div class="modal__calendar-item">8</div>
+                            <div class="modal__calendar-item">9</div>
+                        </div>
+                        <div class="modal__calendar-row">
+                            <div class="modal__calendar-item">10</div>
+                            <div class="modal__calendar-item">11</div>
+                            <div class="modal__calendar-item">12</div>
+                            <div class="modal__calendar-item">13</div>
+                            <div class="modal__calendar-item">14</div>
+                            <div class="modal__calendar-item">15</div>
+                            <div class="modal__calendar-item">16</div>
+                        </div>
+                        <div class="modal__calendar-row">
+                            <div class="modal__calendar-item">17</div>
+                            <div class="modal__calendar-item">18</div>
+                            <div class="modal__calendar-item">19</div>
+                            <div class="modal__calendar-item">20</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">21</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">22</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">23</div>
+                        </div>
+                        <div class="modal__calendar-row">
+                            <div class="modal__calendar-item modal__calendar-item--available">24</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">25</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">26</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">27</div>
+                            <div class="modal__calendar-item modal__calendar-item--available modal__calendar-item--today">28</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">29</div>
+                            <div class="modal__calendar-item modal__calendar-item--available">30</div>
+                        </div>
+                        <div class="modal__calendar-row">
+                            <div class="modal__calendar-item modal__calendar-item--available">31</div>
+                        </div>
+                    </div>
+                    <div class="modal__calendar-mob">
+                        <div class="modal__calendar-mob-item">21</div>
+                        <div class="modal__calendar-mob-item">22</div>
+                        <div class="modal__calendar-mob-item">23</div>
+                        <div class="modal__calendar-mob-item">24</div>
+                        <div class="modal__calendar-mob-item">25</div>
+                        <div class="modal__calendar-mob-item">26</div>
+                        <div class="modal__calendar-mob-item">27</div>
+                        <div class="modal__calendar-mob-item">28</div>
+                        <div class="modal__calendar-mob-item">29</div>
+                        <div class="modal__calendar-mob-item">30</div>
+                        <div class="modal__calendar-mob-item">31</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='modal4' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+            <button type='button' class='modal__close' data-dismiss='modal'>
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="22.5642" width="31.9102" height="3.54558" transform="rotate(-45 0 22.5642)" fill="#B9B9B9"/>
+                    <rect x="2.50781" width="31.9102" height="3.54558" transform="rotate(45 2.50781 0)" fill="#B9B9B9"/>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Выберите день</div>
+
+                <div class="modal__time">
+                    <div class="modal__date">27 января, пятница</div>
+                    <div class="modal__time-items">
+                        <div class="modal__time-item">08:00</div>
+                        <div class="modal__time-item">12:30</div>
+                        <div class="modal__time-item">16:00</div>
+                        <div class="modal__time-item">19:30</div>
+                        <div class="modal__time-item">08:00</div>
+                        <div class="modal__time-item">12:30</div>
+                        <div class="modal__time-item">16:00</div>
+                        <div class="modal__time-item">19:30</div>
+                        <div class="modal__time-item">08:00</div>
+                        <div class="modal__time-item modal__time-item--active">12:30</div>
+                        <div class="modal__time-item modal__time-item--active">16:00</div>
+                        <div class="modal__time-item modal__time-item--active">19:30</div>
+                        <div class="modal__time-item modal__time-item--active">08:00</div>
+                        <div class="modal__time-item modal__time-item--active">12:30</div>
+                        <div class="modal__time-item modal__time-item--active">16:00</div>
+                        <div class="modal__time-item modal__time-item--active">19:30</div>
+                    </div>
+                    <button class="modal__time-other">
+                        <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 13L3 7.5L9 2" stroke="#5C5C5C" stroke-width="3"/>
+                        </svg>
+                        <span>Выбрать другой день</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='modal5' class='modal fade' role='dialog'>
+        <div class='modal-dialog'>
+            <button type='button' class='modal__close' data-dismiss='modal'>
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="22.5642" width="31.9102" height="3.54558" transform="rotate(-45 0 22.5642)" fill="#B9B9B9"/>
+                    <rect x="2.50781" width="31.9102" height="3.54558" transform="rotate(45 2.50781 0)" fill="#B9B9B9"/>
+                </svg>
+            </button>
+            <div class="modal__content">
+                <div class="modal__icon">
+                    <img src="img/like.svg" alt="">
+                </div>
+                <div class="modal__title">Выберите день</div>
+                <div class="modal__desc">Мы свяжемся с вами в ближайшее время!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

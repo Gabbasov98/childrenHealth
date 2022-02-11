@@ -145,6 +145,25 @@
     }
 }
 
+.info-page {
+    padding-bottom: 70px;
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 85px;
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
 .gallery {
     padding-bottom: 70px;
     &__top {
@@ -153,49 +172,10 @@
         justify-content: space-between;
         margin-bottom: 85px;
     }
-    &__tabs {
-        display: flex;
-        align-items: center;
-    }
-    &__tab {
-        position: relative;
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        line-height: 22px;
-        color: #B9B9B9;
-        transition: all .3s;
-        &:hover {
-            color: #1C1C1C;
-            cursor: pointer;
-        }
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            background-color: #B9B9B9;
-            width: 1px;
-            height: 100%;
-            right: 0;
-            opacity: 0;
-        }
-        &:not(:last-child) {
-            padding-right: 28px;
-            margin-right: 28px;
-            &:before {
-                opacity: 1;
-            }
-        }
-        &--active {
-            color: #1C1C1C;
-            pointer-events: none;
-        }
-    }
-    &__content {
-        display: none;
-        &--active {
-            display: block;
-        }
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
     }
     &-photo__wrap {
         display: grid;
@@ -275,6 +255,166 @@
     }
 }
 
+.news,
+.feedback {
+    padding-bottom: 70px;
+    &__title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #000000;
+    }
+    .index-feedback__items {
+        margin-top: 80px;
+        @media screen and (max-width: 992px) {
+            margin-top: 0;
+        }
+    }
+    .index-feedback__item:first-child {
+        margin-top: 0;
+    }
+}
+
+.text {
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 40px;
+        @media screen and (max-width: 992px) {
+            display: none;
+            margin-bottom: 22px;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 160%;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 992px) {
+            font-size: 12px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    ul {
+        padding-left: 10px;
+        li {
+            padding-left: 15px;
+            position: relative;
+            font-size: 16px;
+            line-height: 160%;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: 3px;
+                height: 3px;
+                left: 0;
+                top: 10px;
+                background-color: #1C1C1C;
+                border-radius: 50%;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 992px) {
+            padding-left: 8px;
+            li {
+                font-size: 12px;
+                padding-left: 10px;
+                &:before {
+                    width: 2px;
+                    height: 2px;
+                    top: 7px;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__muted {
+        p {
+            margin: 0 !important;
+            color: #B9B9B9;
+        }
+    }
+}
+
+.pay {
+    &__ways {
+        display: flex;
+        align-items: center;
+        margin: 40px 0;
+        flex-wrap: wrap;
+        &-item {
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            margin: 32px 0;
+        }
+    }
+}
+
+.requisite {
+    margin-top: 80px;
+    @media screen and (max-width: 992px) {
+        margin-top: 50px;
+    }
+    .text__title {
+        margin-bottom: 25px;
+        display: block;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #B9B9B9;
+        &-title,
+        &-desc {
+            width: 50%;
+            font-size: 16px;
+            line-height: 148.19%;
+            font-weight: 500;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            @media screen and (max-width: 992px) {
+                font-size: 12px;
+            }
+        }
+        &-desc {
+            font-weight: 400;
+            color: #5C5C5C;
+        }
+        @media screen and (max-width: 992px) {
+            padding: 10px 0;
+        }
+    }
+}
+
+.certificate {
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        @media screen and (max-width: 992px) {
+            gap: 40px;
+        }
+    }
+    &__item {
+        img {
+            width: 100%;
+        }
+    }
+}
+
 @media screen and (max-width: 992px) {
     .contacts {
         &__inner {
@@ -311,9 +451,10 @@
             }
         }
     }
-    .gallery {
+    .gallery,
+    .info-page {
         &__top {
-            margin-bottom: 32px;
+            margin: 0;
         }
         &__title {
             display: none;
@@ -340,6 +481,19 @@
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
+        }
+    }
+    .news,
+    .feedback {
+        padding-bottom: 40px;
+        &__title {
+            display: none;
+        }
+        .index-news__items {
+            margin-top: 0;
+        }
+        .index-news__item:first-child {
+            margin-top: 0;
         }
     }
 }
