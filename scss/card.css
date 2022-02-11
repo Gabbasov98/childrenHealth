@@ -1,10 +1,8 @@
 .card {
-  padding-top: 80px;
-  padding-bottom: 140px;
+  padding-bottom: 70px;
 }
 .card__inner {
   display: flex;
-  margin-bottom: 80px;
 }
 .card__title-desc {
   display: flex;
@@ -21,9 +19,11 @@
 .card__left {
   width: 335px;
   margin-right: 65px;
+  flex-shrink: 0;
 }
 .card__right {
   width: calc(100% - 400px);
+  flex-shrink: 0;
 }
 .card__title-bold {
   font-weight: bold;
@@ -103,6 +103,7 @@
   line-height: 148.19%;
   color: #5C5C5C;
   display: block;
+  flex-grow: 1;
 }
 .card__day-item:not(:last-child) {
   margin-right: 28px;
@@ -140,68 +141,154 @@
   color: #5C5C5C;
 }
 .card__reception-btn {
-  padding: 15px 92px;
-  font-weight: bold;
+  height: 50px;
+  width: 100%;
+  border-radius: 0;
   font-size: 16px;
-  line-height: 20px;
-  color: #009BE3;
-  border: 1px solid #009BE3;
 }
-.card__item-show {
+
+.doctor-info__group {
+  margin-top: 80px;
+}
+.doctor-info__group-show {
   display: flex;
   align-items: center;
+  margin-bottom: 26px;
 }
-.card__item-title {
+.doctor-info__group-title {
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  color: #1C1C1C;
   margin-right: 50px;
 }
-.card__item-btn {
-  display: flex;
-  align-items: center;
-}
-.card__item-btn .card__item-btn--active .card__item-hide {
-  display: block;
-}
-.card__item-btn span {
+.doctor-info__group-btn {
   font-size: 18px;
   line-height: 22px;
+}
+.doctor-info__group-btn--active .doctor-info__group-btn-hide {
+  display: unset;
+}
+.doctor-info__group-btn--active .doctor-info__group-btn-show {
+  display: none;
+}
+.doctor-info__group-btn--active svg {
+  transform: rotate(180deg);
+}
+.doctor-info__group-btn span {
   text-decoration-line: underline;
-  color: #1C1C1C;
   margin-right: 15px;
 }
-.card__item-hide {
-  margin-top: 40px;
+.doctor-info__group-btn-hide {
+  display: none;
 }
-.card__hide-desc {
+.doctor-info__item {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 13px;
-  padding-bottom: 13px;
+  padding: 13px 0;
+  border-bottom: 1px solid #B9B9B9;
 }
-.card__hide-desc::before {
-  content: '';
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  background-color: #B9B9B9;
-  bottom: 0;
-}
-.card__hide-span {
+.doctor-info__item-year {
   font-weight: 500;
   font-size: 16px;
   line-height: 148.19%;
-  color: #1C1C1C;
   margin-right: 50px;
 }
-.card__hide-text {
+.doctor-info__item-text {
   font-size: 16px;
   line-height: 160%;
   color: #5C5C5C;
 }
-.card__item-hide {
+.doctor-info__item--hidden {
   display: none;
+}
+.doctor-info__item--show {
+  display: flex !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .card__prodoctorov {
+    display: block;
+  }
+  .card__description {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .card {
+    padding-bottom: 45px;
+  }
+  .card__inner {
+    display: block;
+  }
+  .card__left {
+    width: 450px;
+  }
+  .card__img img {
+    width: 100%;
+  }
+  .card__right {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .card__title-bold {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  .card__title-desc {
+    margin-bottom: 30px;
+  }
+  .card__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .card__span {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .card__desc {
+    margin-bottom: 30px;
+  }
+  .card__text {
+    font-size: 12px;
+  }
+  .card__description {
+    margin-bottom: 50px;
+  }
+  .card__reviews {
+    margin-bottom: 14px;
+  }
+  .card__day-item:not(:last-child) {
+    margin-right: 17px;
+    padding-right: 17px;
+  }
+
+  .doctor-info__group-show {
+    display: block;
+    margin-bottom: 17px;
+  }
+  .doctor-info__group-btn {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+  .doctor-info__group-btn span {
+    margin-right: 10px;
+  }
+  .doctor-info__item-year {
+    font-size: 12px;
+    margin-right: 57px;
+  }
+  .doctor-info__item-text {
+    font-size: 12px;
+  }
+  .doctor-info__group {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .card__left {
+    width: 100%;
+  }
 }

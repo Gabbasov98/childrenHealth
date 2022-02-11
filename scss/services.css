@@ -1,8 +1,7 @@
 .services {
-  padding-bottom: 140px; }
+  padding-bottom: 700px; }
   .services__inner {
-    display: flex;
-    margin-top: 50px; }
+    display: flex; }
   .services__sidebar {
     width: 335px;
     margin-right: 65px;
@@ -190,7 +189,7 @@
         display: none; } }
 @media screen and (max-width: 992px) {
   .services {
-    padding-bottom: 80px; }
+    padding-bottom: 40px; }
     .services__inner {
       display: block; }
     .services__sidebar {
@@ -199,7 +198,7 @@
     .services__sidebar-bg {
       background: rgba(0, 0, 0, 0.5);
       position: fixed;
-      z-index: 9;
+      z-index: 19;
       width: 100%;
       height: 100%;
       top: 0;
@@ -216,7 +215,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 11;
+      z-index: 20;
       background: #FFFFFF;
       border-radius: 15px;
       overflow-y: auto;
@@ -249,7 +248,8 @@
         text-decoration: underline; }
       .services__sidebar-link:hover {
         background: #FFFFFF;
-        color: #1C1C1C; }
+        color: #1C1C1C;
+        text-decoration: underline !important; }
     .services__content {
       width: 100%; } }
 
