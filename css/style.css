@@ -3510,14 +3510,13 @@ input::placeholder {
     padding-bottom: 0;
     padding-left: 25px;
     margin-bottom: 20px;
-  }
-  .services__sidebar-link::before {
-    display: none;
+    border: none;
   }
   .services__sidebar-link--active {
     background: #FFFFFF;
     color: #1C1C1C;
     text-decoration: underline;
+    border: none;
   }
   .services__sidebar-link:hover {
     background: #FFFFFF;
