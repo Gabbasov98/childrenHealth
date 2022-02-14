@@ -3700,8 +3700,13 @@ input::placeholder {
 }
 
 .modal-conf .modal-dialog {
-  width: calc(100% - 30px);
+  width: calc(100% - 100px);
   max-width: 1500px;
+}
+@media screen and (max-width: 768px) {
+  .modal-conf .modal-dialog {
+    width: calc(100% - 30px);
+  }
 }
 .modal-conf .modal__title {
   font-weight: bold;
