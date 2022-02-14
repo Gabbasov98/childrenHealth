@@ -529,6 +529,21 @@ input {
             font-size: 24px;
         }
     }
+    &--error {
+        .form-group__error-text {
+            display: block;
+        }
+        input {
+            border-color: #EE6A5F;
+        }
+    }
+    &__error-text {
+        display: none;
+        font-size: 22px;
+        color: #EE6A5F;
+        font-weight: 500;
+        margin-top: 10px;
+    }
     @media screen and (max-width: 992px) {
         margin-top: 11px;
         input {

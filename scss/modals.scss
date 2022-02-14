@@ -1,3 +1,7 @@
+.modal-backdrop.in {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 .modal {
     &-dialog {
         width: 770px;
@@ -170,6 +174,46 @@
         line-height: 160%;
         margin-top: 25px;
         text-align: center;
+    }
+}
+
+.modal-conf {
+    .modal-dialog {
+        width: calc(100% - 30px);
+        max-width: 1500px;
+    }
+    .modal__title {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 120%;
+        text-align: center;
+    }
+    &__text {
+        h3 {
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 20px 0;
+            line-height: 130%;
+        }
+        p {
+            font-size: 22px;
+            line-height: 130%;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            h3 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 18px;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
     }
 }
 

@@ -762,6 +762,19 @@ input::placeholder {
   padding: 16px 30px;
   font-size: 24px;
 }
+.form-group--error .form-group__error-text {
+  display: block;
+}
+.form-group--error input {
+  border-color: #EE6A5F;
+}
+.form-group__error-text {
+  display: none;
+  font-size: 22px;
+  color: #EE6A5F;
+  font-weight: 500;
+  margin-top: 10px;
+}
 @media screen and (max-width: 992px) {
   .form-group {
     margin-top: 11px;
@@ -3224,33 +3237,25 @@ input::placeholder {
 .services__sidebar-mob {
   display: none;
 }
-.services__sidebar-link:not(:first-child) {
-  padding-top: 11px;
-}
 .services__sidebar-link {
   display: block;
   font-weight: 300;
   font-size: 18px;
   line-height: 121%;
   color: #1C1C1C;
-  padding-left: 15px;
   position: relative;
   padding-bottom: 11px;
-}
-.services__sidebar-link::before {
-  content: '';
-  position: absolute;
-  width: 335px;
+  padding: 11px 15px;
   border-bottom: 1px solid #C2C2C2;
-  bottom: 0;
-  left: 0;
 }
 .services__sidebar-link--active {
   background: #009BE3;
+  border-color: #009BE3;
   color: #ffff;
 }
 .services__sidebar-link:hover {
   background: #009BE3;
+  border-color: #009BE3;
   color: #ffff;
 }
 .services__mob-link {
@@ -3523,6 +3528,10 @@ input::placeholder {
     width: 100%;
   }
 }
+.modal-backdrop.in {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .modal-dialog {
   width: 770px;
   background: #FFFFFF;
@@ -3688,6 +3697,42 @@ input::placeholder {
   line-height: 160%;
   margin-top: 25px;
   text-align: center;
+}
+
+.modal-conf .modal-dialog {
+  width: calc(100% - 30px);
+  max-width: 1500px;
+}
+.modal-conf .modal__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+  text-align: center;
+}
+.modal-conf__text h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 20px 0;
+  line-height: 130%;
+}
+.modal-conf__text p {
+  font-size: 22px;
+  line-height: 130%;
+}
+.modal-conf__text p:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 992px) {
+  .modal-conf__text h3 {
+    font-size: 22px;
+  }
+  .modal-conf__text p {
+    font-size: 18px;
+  }
+  .modal-conf__text p:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 992px) {

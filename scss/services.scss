@@ -10,32 +10,24 @@
         &-mob {
             display: none;
         }
-        &-link:not(:first-child) {
-            padding-top: 11px;
-        }
         &-link {
             display: block;
             font-weight: 300;
             font-size: 18px;
             line-height: 121%;
             color: #1C1C1C;
-            padding-left: 15px;
             position: relative;
             padding-bottom: 11px;
-            &::before {
-                content: '';
-                position: absolute;
-                width: 335px;
-                border-bottom: 1px solid #C2C2C2;
-                bottom: 0;
-                left: 0;
-            }
+            padding: 11px 15px;
+            border-bottom: 1px solid #C2C2C2;
             &--active {
                 background: #009BE3;
+                border-color: #009BE3;
                 color: #ffff;
             }
             &:hover {
                 background: #009BE3;
+                border-color: #009BE3;
                 color: #ffff;
             }
         }

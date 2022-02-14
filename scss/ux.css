@@ -423,6 +423,16 @@ input::placeholder {
     .form-group .select .option {
       padding: 16px 30px;
       font-size: 24px; }
+  .form-group--error .form-group__error-text {
+    display: block; }
+  .form-group--error input {
+    border-color: #EE6A5F; }
+  .form-group__error-text {
+    display: none;
+    font-size: 22px;
+    color: #EE6A5F;
+    font-weight: 500;
+    margin-top: 10px; }
   @media screen and (max-width: 992px) {
     .form-group {
       margin-top: 11px; }

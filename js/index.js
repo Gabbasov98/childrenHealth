@@ -115,7 +115,10 @@ $(document).ready(function() {
 
     $(".nav__item").hover(onIn, onOut);
     $(".nav__item-show").click(function() {
-        $(this).siblings(".nav__item-hidden").slideToggle()
+        if ((window.innerWidth < 992)) {
+            $(this).siblings(".nav__item-hidden").slideToggle()
+        }
+
     })
 
 
