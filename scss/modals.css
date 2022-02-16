@@ -6,7 +6,7 @@
   background: #FFFFFF;
   border-radius: 30px; }
 .modal__content {
-  padding: 85px 100px 100px; }
+  padding: 35px 100px 40px; }
 .modal__close {
   position: absolute;
   top: 40px;
@@ -21,7 +21,7 @@
   line-height: 46px;
   text-align: center; }
 .modal__form {
-  margin-top: 84px; }
+  margin-top: 30px; }
   .modal__form-groups .modal__form-group:not(:last-child) {
     margin-bottom: 24px; }
     @media screen and (max-width: 992px) {
@@ -30,9 +30,9 @@
   .modal__form-group {
     margin-top: 0; }
     .modal__form-group:not(:last-child) {
-      margin-bottom: 48px; }
+      margin-bottom: 25px; }
   .modal__form-btn {
-    margin-top: 84px;
+    margin-top: 40px;
     height: 90px;
     width: 100%;
     font-size: 28px; }
@@ -104,11 +104,15 @@
     justify-content: center;
     font-weight: 500;
     font-size: 24px;
-    color: #5C5C5C; }
+    color: #5C5C5C;
+    transition: all .3s; }
     .modal__time-item--active {
       background: #009BE3;
       color: #fff;
       cursor: pointer; }
+      .modal__time-item--active:hover {
+        color: #FFFFFF;
+        background: rgba(0, 155, 227, 0.7); }
   .modal__time-other {
     margin-top: 85px;
     font-weight: 500;
@@ -240,7 +244,8 @@
         font-size: 18px;
         line-height: 22px;
         color: #009BE3;
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
   .modal__date {
     font-size: 12px;
     line-height: 15px;

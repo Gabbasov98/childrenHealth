@@ -115,13 +115,9 @@
     justify-content: space-between;
     margin-bottom: 85px;
     flex-wrap: wrap; }
-  .info-page__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px; }
-    @media screen and (max-width: 1200px) {
-      .info-page__title {
-        margin-bottom: 15px; } }
+  @media screen and (max-width: 1200px) {
+    .info-page__title {
+      margin-bottom: 15px; } }
 
 .gallery {
   padding-bottom: 70px; }
@@ -130,10 +126,6 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 85px; }
-  .gallery__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px; }
   .gallery-photo__wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -157,13 +149,9 @@
 
 .about {
   padding-bottom: 70px; }
-  .about__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px; }
-    @media screen and (max-width: 992px) {
-      .about__title {
-        display: none; } }
+  @media screen and (max-width: 992px) {
+    .about__title {
+      display: none; } }
   .about__img {
     width: 100%;
     margin: 32px 0; }
@@ -197,12 +185,6 @@
 .news,
 .feedback {
   padding-bottom: 70px; }
-  .news__title,
-  .feedback__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    color: #000000; }
   .news .index-feedback__items,
   .feedback .index-feedback__items {
     margin-top: 80px; }
@@ -333,8 +315,6 @@
     margin-bottom: 32px; }
   .contacts__title {
     font-size: 22px; }
-    .contacts__title-mob {
-      display: none; }
   .contacts__item {
     font-size: 16px; }
   .contacts__images {
@@ -349,18 +329,14 @@
 @media screen and (max-width: 992px) {
   .gallery__top,
   .info-page__top {
-    margin: 0; }
-  .gallery__title,
-  .info-page__title {
-    display: none; }
+    margin: 0 0 32px;
+    display: block; }
   .gallery-photo__wrap,
   .info-page-photo__wrap {
     grid-template-columns: 1fr 1fr; }
 
   .about {
     padding-bottom: 40px; }
-    .about__img {
-      margin-top: 0; }
     .about__wrap {
       flex-wrap: wrap; }
       .about__wrap .about-clinic__card {
@@ -375,14 +351,23 @@
   .news,
   .feedback {
     padding-bottom: 40px; }
-    .news__title,
-    .feedback__title {
-      display: none; }
     .news .index-news__items,
-    .feedback .index-news__items {
-      margin-top: 0; }
+    .news .index-feedback__items,
+    .feedback .index-news__items,
+    .feedback .index-feedback__items {
+      margin-top: 32px; }
     .news .index-news__item:first-child,
     .feedback .index-news__item:first-child {
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  .analiz__top {
+    display: block; }
+  .analiz__search {
+    margin-top: 15px; }
+
+  .doctors__top {
+    display: block; }
+  .doctors__select {
+    margin-top: 15px; } }
 
 /*# sourceMappingURL=pages.css.map */

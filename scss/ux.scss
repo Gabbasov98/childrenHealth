@@ -40,13 +40,12 @@ input {
     &::placeholder {
         color: #808080;
     }
-    &:focus,
-    &:active {
-        // border: 1px solid #c19d5f !important;
-    }
-    &.input-invalid {
-        // border: 1px solid #ff6f6f !important;
-    }
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .select {
@@ -167,6 +166,10 @@ input {
 }
 
 .doctor-card {
+    display: block;
+    &:hover {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34);
+    }
     &__top {
         position: relative;
         height: 345px;
@@ -274,7 +277,7 @@ input {
         }
         &:hover {
             color: #FFFFFF;
-            background: rgba(#009BE3, 0.9);
+            background: rgba(#009BE3, 0.7);
         }
     }
     &__top {
@@ -386,6 +389,10 @@ input {
         font-size: 18px;
         line-height: 160%;
         margin-top: 17px;
+        transition: all .3s;
+        &:hover {
+            color: #009BE3;
+        }
     }
     @media screen and (max-width: 992px) {
         width: 100%;
@@ -547,19 +554,19 @@ input {
     @media screen and (max-width: 992px) {
         margin-top: 11px;
         input {
-            height: 32px;
+            height: 42px;
             padding: 0 12px;
-            font-size: 12px;
+            font-size: 14px;
         }
         label {
-            font-size: 12px;
+            font-size: 14px;
             line-height: 15px;
             margin-bottom: 11px;
         }
         .select {
-            height: 32px;
+            height: 42px;
             .current {
-                font-size: 12px;
+                font-size: 14px;
                 padding: 0 24px 0 12px;
                 background-size: 8px auto;
                 background-position: right 14px center;
@@ -569,6 +576,9 @@ input {
                 font-size: 12px;
                 line-height: 1;
             }
+        }
+        &__error-text {
+            font-size: 14px;
         }
     }
 }

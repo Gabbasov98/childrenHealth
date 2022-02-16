@@ -283,6 +283,12 @@ input::placeholder {
   color: #808080;
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
 .select {
   width: 100%;
   float: unset;
@@ -402,6 +408,12 @@ input::placeholder {
   }
 }
 
+.doctor-card {
+  display: block;
+}
+.doctor-card:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34);
+}
 .doctor-card__top {
   position: relative;
   height: 345px;
@@ -508,7 +520,7 @@ input::placeholder {
 }
 .feedback-card__link:hover {
   color: #FFFFFF;
-  background: rgba(0, 155, 227, 0.9);
+  background: rgba(0, 155, 227, 0.7);
 }
 .feedback-card__top {
   display: flex;
@@ -620,6 +632,10 @@ input::placeholder {
   font-size: 18px;
   line-height: 160%;
   margin-top: 17px;
+  transition: all .3s;
+}
+.news-card__text:hover {
+  color: #009BE3;
 }
 @media screen and (max-width: 992px) {
   .news-card {
@@ -780,20 +796,20 @@ input::placeholder {
     margin-top: 11px;
   }
   .form-group input {
-    height: 32px;
+    height: 42px;
     padding: 0 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .form-group label {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 15px;
     margin-bottom: 11px;
   }
   .form-group .select {
-    height: 32px;
+    height: 42px;
   }
   .form-group .select .current {
-    font-size: 12px;
+    font-size: 14px;
     padding: 0 24px 0 12px;
     background-size: 8px auto;
     background-position: right 14px center;
@@ -802,6 +818,9 @@ input::placeholder {
     padding: 12px;
     font-size: 12px;
     line-height: 1;
+  }
+  .form-group__error-text {
+    font-size: 14px;
   }
 }
 
@@ -2561,11 +2580,6 @@ input::placeholder {
   margin-bottom: 85px;
   flex-wrap: wrap;
 }
-.info-page__title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-}
 @media screen and (max-width: 1200px) {
   .info-page__title {
     margin-bottom: 15px;
@@ -2580,11 +2594,6 @@ input::placeholder {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 85px;
-}
-.gallery__title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
 }
 .gallery-photo__wrap {
   display: grid;
@@ -2617,11 +2626,6 @@ input::placeholder {
 
 .about {
   padding-bottom: 70px;
-}
-.about__title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
 }
 @media screen and (max-width: 992px) {
   .about__title {
@@ -2673,13 +2677,6 @@ input::placeholder {
 .news,
 .feedback {
   padding-bottom: 70px;
-}
-.news__title,
-.feedback__title {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
 }
 .news .index-feedback__items,
 .feedback .index-feedback__items {
@@ -2857,9 +2854,6 @@ input::placeholder {
   .contacts__title {
     font-size: 22px;
   }
-  .contacts__title-mob {
-    display: none;
-  }
   .contacts__item {
     font-size: 16px;
   }
@@ -2880,11 +2874,8 @@ input::placeholder {
 @media screen and (max-width: 992px) {
   .gallery__top,
   .info-page__top {
-    margin: 0;
-  }
-  .gallery__title,
-  .info-page__title {
-    display: none;
+    margin: 0 0 32px;
+    display: block;
   }
   .gallery-photo__wrap,
   .info-page-photo__wrap {
@@ -2893,9 +2884,6 @@ input::placeholder {
 
   .about {
     padding-bottom: 40px;
-  }
-  .about__img {
-    margin-top: 0;
   }
   .about__wrap {
     flex-wrap: wrap;
@@ -2916,17 +2904,29 @@ input::placeholder {
   .feedback {
     padding-bottom: 40px;
   }
-  .news__title,
-  .feedback__title {
-    display: none;
-  }
   .news .index-news__items,
-  .feedback .index-news__items {
-    margin-top: 0;
+  .news .index-feedback__items,
+  .feedback .index-news__items,
+  .feedback .index-feedback__items {
+    margin-top: 32px;
   }
   .news .index-news__item:first-child,
   .feedback .index-news__item:first-child {
     margin-top: 0;
+  }
+
+  .analiz__top {
+    display: block;
+  }
+  .analiz__search {
+    margin-top: 15px;
+  }
+
+  .doctors__top {
+    display: block;
+  }
+  .doctors__select {
+    margin-top: 15px;
   }
 }
 .card {
@@ -3537,7 +3537,7 @@ input::placeholder {
   border-radius: 30px;
 }
 .modal__content {
-  padding: 85px 100px 100px;
+  padding: 35px 100px 40px;
 }
 .modal__close {
   position: absolute;
@@ -3557,7 +3557,7 @@ input::placeholder {
   text-align: center;
 }
 .modal__form {
-  margin-top: 84px;
+  margin-top: 30px;
 }
 .modal__form-groups .modal__form-group:not(:last-child) {
   margin-bottom: 24px;
@@ -3571,10 +3571,10 @@ input::placeholder {
   margin-top: 0;
 }
 .modal__form-group:not(:last-child) {
-  margin-bottom: 48px;
+  margin-bottom: 25px;
 }
 .modal__form-btn {
-  margin-top: 84px;
+  margin-top: 40px;
   height: 90px;
   width: 100%;
   font-size: 28px;
@@ -3666,11 +3666,16 @@ input::placeholder {
   font-weight: 500;
   font-size: 24px;
   color: #5C5C5C;
+  transition: all .3s;
 }
 .modal__time-item--active {
   background: #009BE3;
   color: #fff;
   cursor: pointer;
+}
+.modal__time-item--active:hover {
+  color: #FFFFFF;
+  background: rgba(0, 155, 227, 0.7);
 }
 .modal__time-other {
   margin-top: 85px;
@@ -3848,6 +3853,7 @@ input::placeholder {
     line-height: 22px;
     color: #009BE3;
     text-align: center;
+    cursor: pointer;
   }
   .modal__date {
     font-size: 12px;

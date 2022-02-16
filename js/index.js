@@ -192,6 +192,33 @@ $(document).ready(function() {
         $(".services__sidebar-nav").removeClass("services__sidebar-nav--active")
         $(".services__sidebar-open").removeClass("services__sidebar-open--active")
     })
+
+    $(".date-input").click(function() {
+        console.log(false)
+        $("#modal3").modal('show')
+        $("#modal2").modal('hide')
+    })
+
+    $(".modal__calendar-item--available").click(function() {
+        $("#modal4").modal('show')
+        $("#modal3").modal('hide')
+    })
+
+    $(".modal__calendar-mob-item").click(function() {
+        $("#modal4").modal('show')
+        $("#modal3").modal('hide')
+    })
+
+    $(".modal__time-item--active").click(function() {
+        $("#modal2").modal('show')
+        $("#modal4").modal('hide')
+    })
+
+    $(".modal__time-other").click(function() {
+        $("#modal3").modal('show')
+        $("#modal4").modal('hide')
+    })
+
 })
 
 

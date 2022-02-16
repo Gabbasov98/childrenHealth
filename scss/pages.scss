@@ -155,9 +155,6 @@
         flex-wrap: wrap;
     }
     &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
         @media screen and (max-width: 1200px) {
             margin-bottom: 15px;
         }
@@ -171,11 +168,6 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 85px;
-    }
-    &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
     }
     &-photo__wrap {
         display: grid;
@@ -206,9 +198,6 @@
 .about {
     padding-bottom: 70px;
     &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
         @media screen and (max-width: 992px) {
             display: none;
         }
@@ -258,12 +247,6 @@
 .news,
 .feedback {
     padding-bottom: 70px;
-    &__title {
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        color: #000000;
-    }
     .index-feedback__items {
         margin-top: 80px;
         @media screen and (max-width: 992px) {
@@ -433,9 +416,6 @@
         }
         &__title {
             font-size: 22px;
-            &-mob {
-                display: none;
-            }
         }
         &__item {
             font-size: 16px;
@@ -454,10 +434,8 @@
     .gallery,
     .info-page {
         &__top {
-            margin: 0;
-        }
-        &__title {
-            display: none;
+            margin: 0 0 32px;
+            display: block;
         }
         &-photo__wrap {
             grid-template-columns: 1fr 1fr;
@@ -465,9 +443,6 @@
     }
     .about {
         padding-bottom: 40px;
-        &__img {
-            margin-top: 0;
-        }
         &__wrap {
             flex-wrap: wrap;
             .about-clinic__card {
@@ -486,14 +461,28 @@
     .news,
     .feedback {
         padding-bottom: 40px;
-        &__title {
-            display: none;
-        }
-        .index-news__items {
-            margin-top: 0;
+        .index-news__items,
+        .index-feedback__items {
+            margin-top: 32px;
         }
         .index-news__item:first-child {
             margin-top: 0;
+        }
+    }
+    .analiz {
+        &__top {
+            display: block;
+        }
+        &__search {
+            margin-top: 15px;
+        }
+    }
+    .doctors {
+        &__top {
+            display: block;
+        }
+        &__select {
+            margin-top: 15px;
         }
     }
 }

@@ -35,6 +35,11 @@ input[type="date"]:valid::before {
 input::placeholder {
   color: #808080; }
 
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px; }
+
 .select {
   width: 100%;
   float: unset;
@@ -136,61 +141,65 @@ input::placeholder {
     .display2 {
       font-size: 28px; } }
 
-.doctor-card__top {
-  position: relative;
-  height: 345px;
-  overflow: hidden; }
-  .doctor-card__top img {
-    width: 100%;
-    min-height: 100%;
-    min-width: 100%; }
-.doctor-card__img {
+.doctor-card {
   display: block; }
-.doctor-card__expirience {
-  position: absolute;
-  background: #FFFFFF;
-  border-radius: 15px;
-  height: 44px;
-  left: 10px;
-  bottom: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  color: #009BE3;
-  padding: 0 14px;
-  display: flex;
-  align-items: center; }
-.doctor-card__bottom {
-  padding: 25px;
-  background: #009BE3;
-  color: #fff; }
-.doctor-card__name, .doctor-card__prof {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px; }
-.doctor-card__prof {
-  margin-top: 12px;
-  font-weight: 500; }
-@media screen and (max-width: 992px) {
+  .doctor-card:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34); }
   .doctor-card__top {
-    height: 280px; }
-  .doctor-card__bottom {
-    padding: 12px; }
-  .doctor-card__name, .doctor-card__prof {
-    font-size: 12px;
-    line-height: 15px; }
-  .doctor-card__prof {
-    margin-top: 7px; }
+    position: relative;
+    height: 345px;
+    overflow: hidden; }
+    .doctor-card__top img {
+      width: 100%;
+      min-height: 100%;
+      min-width: 100%; }
+  .doctor-card__img {
+    display: block; }
   .doctor-card__expirience {
-    height: 23px;
-    padding: 0 7px;
-    left: 6px;
-    font-size: 12px; } }
-@media screen and (max-width: 576px) {
-  .doctor-card__top {
-    height: 210px; } }
-@media screen and (max-width: 360px) {
-  .doctor-card__top {
-    height: 190px; } }
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 15px;
+    height: 44px;
+    left: 10px;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #009BE3;
+    padding: 0 14px;
+    display: flex;
+    align-items: center; }
+  .doctor-card__bottom {
+    padding: 25px;
+    background: #009BE3;
+    color: #fff; }
+  .doctor-card__name, .doctor-card__prof {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px; }
+  .doctor-card__prof {
+    margin-top: 12px;
+    font-weight: 500; }
+  @media screen and (max-width: 992px) {
+    .doctor-card__top {
+      height: 280px; }
+    .doctor-card__bottom {
+      padding: 12px; }
+    .doctor-card__name, .doctor-card__prof {
+      font-size: 12px;
+      line-height: 15px; }
+    .doctor-card__prof {
+      margin-top: 7px; }
+    .doctor-card__expirience {
+      height: 23px;
+      padding: 0 7px;
+      left: 6px;
+      font-size: 12px; } }
+  @media screen and (max-width: 576px) {
+    .doctor-card__top {
+      height: 210px; } }
+  @media screen and (max-width: 360px) {
+    .doctor-card__top {
+      height: 190px; } }
 
 .feedback-card {
   display: flex;
@@ -220,7 +229,7 @@ input::placeholder {
       margin-left: 16px; }
     .feedback-card__link:hover {
       color: #FFFFFF;
-      background: rgba(0, 155, 227, 0.9); }
+      background: rgba(0, 155, 227, 0.7); }
   .feedback-card__top {
     display: flex;
     align-items: center; }
@@ -309,7 +318,10 @@ input::placeholder {
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
-    margin-top: 17px; }
+    margin-top: 17px;
+    transition: all .3s; }
+    .news-card__text:hover {
+      color: #009BE3; }
   @media screen and (max-width: 992px) {
     .news-card {
       width: 100%;
@@ -437,24 +449,26 @@ input::placeholder {
     .form-group {
       margin-top: 11px; }
       .form-group input {
-        height: 32px;
+        height: 42px;
         padding: 0 12px;
-        font-size: 12px; }
+        font-size: 14px; }
       .form-group label {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 15px;
         margin-bottom: 11px; }
       .form-group .select {
-        height: 32px; }
+        height: 42px; }
         .form-group .select .current {
-          font-size: 12px;
+          font-size: 14px;
           padding: 0 24px 0 12px;
           background-size: 8px auto;
           background-position: right 14px center; }
         .form-group .select .option {
           padding: 12px;
           font-size: 12px;
-          line-height: 1; } }
+          line-height: 1; }
+      .form-group__error-text {
+        font-size: 14px; } }
 
 .breadcrumbs {
   margin: 80px 0 50px; }
