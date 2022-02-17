@@ -219,6 +219,11 @@ $(document).ready(function() {
         $("#modal4").modal('hide')
     })
 
+    $(".modal__calendar-mob-item").click(function() {
+        $(".modal__calendar-mob-item").removeClass("modal__calendar-mob-item--active")
+        $(this).addClass("modal__calendar-mob-item--active")
+    })
+
 })
 
 

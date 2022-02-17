@@ -205,12 +205,22 @@
     margin-top: 50px; }
     .modal__form-group:not(:last-child) {
       margin-bottom: 32px; }
+    .modal__form-group label {
+      margin-bottom: 4px;
+      font-size: 16px; }
+    .modal__form-group input,
+    .modal__form-group .select {
+      height: 45px;
+      font-size: 16px; }
+      .modal__form-group input .current,
+      .modal__form-group .select .current {
+        font-size: 16px; }
     .modal__form-btn {
       border-radius: 5px;
       font-size: 12px;
       line-height: 1;
-      height: 38px;
-      margin-top: 50px; }
+      height: 45px;
+      margin-top: 20px; }
   .modal__calendar {
     margin-top: 50px; }
     .modal__calendar-nav {
@@ -257,6 +267,23 @@
         color: #009BE3;
         text-align: center;
         cursor: pointer; }
+        .modal__calendar-mob-item span {
+          position: relative;
+          z-index: 2; }
+        .modal__calendar-mob-item--active {
+          position: relative;
+          color: #fff; }
+          .modal__calendar-mob-item--active:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #009BE3;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); }
   .modal__date {
     font-size: 12px;
     line-height: 15px;

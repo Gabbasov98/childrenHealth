@@ -274,13 +274,25 @@
                 &:not(:last-child) {
                     margin-bottom: 32px;
                 }
+                label {
+                    margin-bottom: 4px;
+                    font-size: 16px;
+                }
+                input,
+                .select {
+                    height: 45px;
+                    font-size: 16px;
+                    .current {
+                        font-size: 16px;
+                    }
+                }
             }
             &-btn {
                 border-radius: 5px;
                 font-size: 12px;
                 line-height: 1;
-                height: 38px;
-                margin-top: 50px;
+                height: 45px;
+                margin-top: 20px;
             }
         }
         &__calendar {
@@ -342,6 +354,26 @@
                     color: #009BE3;
                     text-align: center;
                     cursor: pointer;
+                    span {
+                        position: relative;
+                        z-index: 2;
+                    }
+                    &--active {
+                        position: relative;
+                        color: #fff;
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            z-index: 1;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            background-color: #009BE3;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
                 }
             }
         }
