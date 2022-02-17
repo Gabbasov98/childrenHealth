@@ -750,6 +750,7 @@ h1 {
   padding: 0 30px;
   font-weight: 500;
   font-size: 24px;
+  border-radius: 0%;
 }
 .form-group input::placeholder {
   color: #B9B9B9;

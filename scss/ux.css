@@ -412,7 +412,8 @@ h1 {
     height: 77px;
     padding: 0 30px;
     font-weight: 500;
-    font-size: 24px; }
+    font-size: 24px;
+    border-radius: 0%; }
     .form-group input::placeholder {
       color: #B9B9B9; }
   .form-group .select {
