@@ -3924,6 +3924,7 @@ h1 {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .swiper-button-prev,
