@@ -4,7 +4,8 @@
 .modal-dialog {
   width: 770px;
   background: #FFFFFF;
-  border-radius: 30px; }
+  border-radius: 30px;
+  margin-top: 12px; }
 .modal__content {
   padding: 35px 100px 40px; }
 .modal__close {
@@ -17,25 +18,35 @@
     fill: #1C1C1C; }
 .modal__title {
   font-weight: bold;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 46px;
   text-align: center; }
 .modal__form {
-  margin-top: 30px; }
+  margin-top: 10px; }
   .modal__form-groups .modal__form-group:not(:last-child) {
-    margin-bottom: 24px; }
+    margin-bottom: 15px; }
     @media screen and (max-width: 992px) {
       .modal__form-groups .modal__form-group:not(:last-child) {
         margin-bottom: 11px; } }
   .modal__form-group {
     margin-top: 0; }
     .modal__form-group:not(:last-child) {
-      margin-bottom: 25px; }
+      margin-bottom: 15px; }
+    .modal__form-group label {
+      margin-bottom: 8px;
+      font-size: 20px; }
+    .modal__form-group input,
+    .modal__form-group .select {
+      height: 55px;
+      font-size: 20px; }
+      .modal__form-group input .current,
+      .modal__form-group .select .current {
+        font-size: 20px; }
   .modal__form-btn {
-    margin-top: 40px;
-    height: 90px;
+    margin-top: 20px;
+    height: 60px;
     width: 100%;
-    font-size: 28px; }
+    font-size: 20px; }
 .modal__calendar {
   margin-top: 85px; }
   .modal__calendar-nav {

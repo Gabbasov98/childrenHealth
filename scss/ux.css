@@ -125,7 +125,7 @@ h1 {
   background-image: url(../img/calendar.svg);
   background-position: right 20px center;
   background-repeat: no-repeat;
-  background-size: 36px auto; }
+  background-size: 26px auto; }
   @media screen and (max-width: 992px) {
     .date-input {
       background-position: right 8px center;
@@ -441,7 +441,7 @@ h1 {
     border-color: #EE6A5F; }
   .form-group__error-text {
     display: none;
-    font-size: 22px;
+    font-size: 18px;
     color: #EE6A5F;
     font-weight: 500;
     margin-top: 10px; }
