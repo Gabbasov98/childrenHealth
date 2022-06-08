@@ -236,6 +236,11 @@ input[type="date"]:valid::before {
 input::placeholder {
   color: #808080; }
 
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px; }
+
 .select {
   width: 100%;
   float: unset;
@@ -321,7 +326,7 @@ input::placeholder {
   background-image: url(../img/calendar.svg);
   background-position: right 20px center;
   background-repeat: no-repeat;
-  background-size: 36px auto; }
+  background-size: 26px auto; }
   @media screen and (max-width: 992px) {
     .date-input {
       background-position: right 8px center;
@@ -337,61 +342,65 @@ input::placeholder {
     .display2 {
       font-size: 28px; } }
 
-.doctor-card__top {
-  position: relative;
-  height: 345px;
-  overflow: hidden; }
-  .doctor-card__top img {
-    width: 100%;
-    min-height: 100%;
-    min-width: 100%; }
-.doctor-card__img {
+.doctor-card {
   display: block; }
-.doctor-card__expirience {
-  position: absolute;
-  background: #FFFFFF;
-  border-radius: 15px;
-  height: 44px;
-  left: 10px;
-  bottom: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  color: #009BE3;
-  padding: 0 14px;
-  display: flex;
-  align-items: center; }
-.doctor-card__bottom {
-  padding: 25px;
-  background: #009BE3;
-  color: #fff; }
-.doctor-card__name, .doctor-card__prof {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px; }
-.doctor-card__prof {
-  margin-top: 12px;
-  font-weight: 500; }
-@media screen and (max-width: 992px) {
+  .doctor-card:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34); }
   .doctor-card__top {
-    height: 280px; }
-  .doctor-card__bottom {
-    padding: 12px; }
-  .doctor-card__name, .doctor-card__prof {
-    font-size: 12px;
-    line-height: 15px; }
-  .doctor-card__prof {
-    margin-top: 7px; }
+    position: relative;
+    height: 345px;
+    overflow: hidden; }
+    .doctor-card__top img {
+      width: 100%;
+      min-height: 100%;
+      min-width: 100%; }
+  .doctor-card__img {
+    display: block; }
   .doctor-card__expirience {
-    height: 23px;
-    padding: 0 7px;
-    left: 6px;
-    font-size: 12px; } }
-@media screen and (max-width: 576px) {
-  .doctor-card__top {
-    height: 210px; } }
-@media screen and (max-width: 360px) {
-  .doctor-card__top {
-    height: 190px; } }
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 15px;
+    height: 44px;
+    left: 10px;
+    bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #009BE3;
+    padding: 0 14px;
+    display: flex;
+    align-items: center; }
+  .doctor-card__bottom {
+    padding: 25px;
+    background: #009BE3;
+    color: #fff; }
+  .doctor-card__name, .doctor-card__prof {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px; }
+  .doctor-card__prof {
+    margin-top: 12px;
+    font-weight: 500; }
+  @media screen and (max-width: 992px) {
+    .doctor-card__top {
+      height: 280px; }
+    .doctor-card__bottom {
+      padding: 12px; }
+    .doctor-card__name, .doctor-card__prof {
+      font-size: 12px;
+      line-height: 15px; }
+    .doctor-card__prof {
+      margin-top: 7px; }
+    .doctor-card__expirience {
+      height: 23px;
+      padding: 0 7px;
+      left: 6px;
+      font-size: 12px; } }
+  @media screen and (max-width: 576px) {
+    .doctor-card__top {
+      height: 210px; } }
+  @media screen and (max-width: 360px) {
+    .doctor-card__top {
+      height: 190px; } }
 
 .feedback-card {
   display: flex;
@@ -421,7 +430,7 @@ input::placeholder {
       margin-left: 16px; }
     .feedback-card__link:hover {
       color: #FFFFFF;
-      background: rgba(0, 155, 227, 0.9); }
+      background: rgba(0, 155, 227, 0.7); }
   .feedback-card__top {
     display: flex;
     align-items: center; }
@@ -510,7 +519,10 @@ input::placeholder {
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
-    margin-top: 17px; }
+    margin-top: 17px;
+    transition: all .3s; }
+    .news-card__text:hover {
+      color: #009BE3; }
   @media screen and (max-width: 992px) {
     .news-card {
       width: 100%;
@@ -601,7 +613,8 @@ input::placeholder {
     height: 77px;
     padding: 0 30px;
     font-weight: 500;
-    font-size: 24px; }
+    font-size: 24px;
+    border-radius: 0%; }
     .form-group input::placeholder {
       color: #B9B9B9; }
   .form-group .select {
@@ -624,28 +637,40 @@ input::placeholder {
     .form-group .select .option {
       padding: 16px 30px;
       font-size: 24px; }
+  .form-group--error .form-group__error-text {
+    display: block; }
+  .form-group--error input {
+    border-color: #EE6A5F; }
+  .form-group__error-text {
+    display: none;
+    font-size: 18px;
+    color: #EE6A5F;
+    font-weight: 500;
+    margin-top: 10px; }
   @media screen and (max-width: 992px) {
     .form-group {
       margin-top: 11px; }
       .form-group input {
-        height: 32px;
+        height: 42px;
         padding: 0 12px;
-        font-size: 12px; }
+        font-size: 14px; }
       .form-group label {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 15px;
         margin-bottom: 11px; }
       .form-group .select {
-        height: 32px; }
+        height: 42px; }
         .form-group .select .current {
-          font-size: 12px;
+          font-size: 14px;
           padding: 0 24px 0 12px;
           background-size: 8px auto;
           background-position: right 14px center; }
         .form-group .select .option {
           padding: 12px;
           font-size: 12px;
-          line-height: 1; } }
+          line-height: 1; }
+      .form-group__error-text {
+        font-size: 14px; } }
 
 .breadcrumbs {
   margin: 80px 0 50px; }
@@ -1974,13 +1999,9 @@ input::placeholder {
     justify-content: space-between;
     margin-bottom: 85px;
     flex-wrap: wrap; }
-  .info-page__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px; }
-    @media screen and (max-width: 1200px) {
-      .info-page__title {
-        margin-bottom: 15px; } }
+  @media screen and (max-width: 1200px) {
+    .info-page__title {
+      margin-bottom: 15px; } }
 
 .gallery {
   padding-bottom: 70px; }
@@ -1989,10 +2010,6 @@ input::placeholder {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 85px; }
-  .gallery__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px; }
   .gallery-photo__wrap {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2016,13 +2033,9 @@ input::placeholder {
 
 .about {
   padding-bottom: 70px; }
-  .about__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px; }
-    @media screen and (max-width: 992px) {
-      .about__title {
-        display: none; } }
+  @media screen and (max-width: 992px) {
+    .about__title {
+      display: none; } }
   .about__img {
     width: 100%;
     margin: 32px 0; }
@@ -2056,12 +2069,6 @@ input::placeholder {
 .news,
 .feedback {
   padding-bottom: 70px; }
-  .news__title,
-  .feedback__title {
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    color: #000000; }
   .news .index-feedback__items,
   .feedback .index-feedback__items {
     margin-top: 80px; }
@@ -2192,8 +2199,6 @@ input::placeholder {
     margin-bottom: 32px; }
   .contacts__title {
     font-size: 22px; }
-    .contacts__title-mob {
-      display: none; }
   .contacts__item {
     font-size: 16px; }
   .contacts__images {
@@ -2208,18 +2213,14 @@ input::placeholder {
 @media screen and (max-width: 992px) {
   .gallery__top,
   .info-page__top {
-    margin: 0; }
-  .gallery__title,
-  .info-page__title {
-    display: none; }
+    margin: 0 0 32px;
+    display: block; }
   .gallery-photo__wrap,
   .info-page-photo__wrap {
     grid-template-columns: 1fr 1fr; }
 
   .about {
     padding-bottom: 40px; }
-    .about__img {
-      margin-top: 0; }
     .about__wrap {
       flex-wrap: wrap; }
       .about__wrap .about-clinic__card {
@@ -2234,15 +2235,24 @@ input::placeholder {
   .news,
   .feedback {
     padding-bottom: 40px; }
-    .news__title,
-    .feedback__title {
-      display: none; }
     .news .index-news__items,
-    .feedback .index-news__items {
-      margin-top: 0; }
+    .news .index-feedback__items,
+    .feedback .index-news__items,
+    .feedback .index-feedback__items {
+      margin-top: 32px; }
     .news .index-news__item:first-child,
     .feedback .index-news__item:first-child {
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  .analiz__top {
+    display: block; }
+  .analiz__search {
+    margin-top: 15px; }
+
+  .doctors__top {
+    display: block; }
+  .doctors__select {
+    margin-top: 15px; } }
 .card {
   padding-bottom: 70px; }
   .card__inner {
@@ -2479,29 +2489,23 @@ input::placeholder {
     flex-shrink: 0; }
     .services__sidebar-mob {
       display: none; }
-    .services__sidebar-link:not(:first-child) {
-      padding-top: 11px; }
     .services__sidebar-link {
       display: block;
       font-weight: 300;
       font-size: 18px;
       line-height: 121%;
       color: #1C1C1C;
-      padding-left: 15px;
       position: relative;
-      padding-bottom: 11px; }
-      .services__sidebar-link::before {
-        content: '';
-        position: absolute;
-        width: 335px;
-        border-bottom: 1px solid #C2C2C2;
-        bottom: 0;
-        left: 0; }
+      padding-bottom: 11px;
+      padding: 11px 15px;
+      border-bottom: 1px solid #C2C2C2; }
       .services__sidebar-link--active {
         background: #009BE3;
+        border-color: #009BE3;
         color: #ffff; }
       .services__sidebar-link:hover {
         background: #009BE3;
+        border-color: #009BE3;
         color: #ffff; }
   .services__mob-link {
     font-weight: 500;
@@ -2710,25 +2714,29 @@ input::placeholder {
     .services__sidebar-link {
       padding-bottom: 0;
       padding-left: 25px;
-      margin-bottom: 20px; }
-      .services__sidebar-link::before {
-        display: none; }
+      margin-bottom: 20px;
+      border: none; }
       .services__sidebar-link--active {
         background: #FFFFFF;
         color: #1C1C1C;
-        text-decoration: underline; }
+        text-decoration: underline;
+        border: none; }
       .services__sidebar-link:hover {
         background: #FFFFFF;
         color: #1C1C1C;
         text-decoration: underline !important; }
     .services__content {
       width: 100%; } }
+.modal-backdrop.in {
+  background: rgba(0, 0, 0, 0.5); }
+
 .modal-dialog {
   width: 770px;
   background: #FFFFFF;
-  border-radius: 30px; }
+  border-radius: 30px;
+  margin-top: 12px; }
 .modal__content {
-  padding: 85px 100px 100px; }
+  padding: 35px 100px 40px; }
 .modal__close {
   position: absolute;
   top: 40px;
@@ -2739,25 +2747,35 @@ input::placeholder {
     fill: #1C1C1C; }
 .modal__title {
   font-weight: bold;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 46px;
   text-align: center; }
 .modal__form {
-  margin-top: 84px; }
+  margin-top: 10px; }
   .modal__form-groups .modal__form-group:not(:last-child) {
-    margin-bottom: 24px; }
+    margin-bottom: 15px; }
     @media screen and (max-width: 992px) {
       .modal__form-groups .modal__form-group:not(:last-child) {
         margin-bottom: 11px; } }
   .modal__form-group {
     margin-top: 0; }
     .modal__form-group:not(:last-child) {
-      margin-bottom: 48px; }
+      margin-bottom: 15px; }
+    .modal__form-group label {
+      margin-bottom: 8px;
+      font-size: 20px; }
+    .modal__form-group input,
+    .modal__form-group .select {
+      height: 55px;
+      font-size: 20px; }
+      .modal__form-group input .current,
+      .modal__form-group .select .current {
+        font-size: 20px; }
   .modal__form-btn {
-    margin-top: 84px;
-    height: 90px;
+    margin-top: 20px;
+    height: 60px;
     width: 100%;
-    font-size: 28px; }
+    font-size: 20px; }
 .modal__calendar {
   margin-top: 85px; }
   .modal__calendar-nav {
@@ -2826,11 +2844,15 @@ input::placeholder {
     justify-content: center;
     font-weight: 500;
     font-size: 24px;
-    color: #5C5C5C; }
+    color: #5C5C5C;
+    transition: all .3s; }
     .modal__time-item--active {
       background: #009BE3;
       color: #fff;
       cursor: pointer; }
+      .modal__time-item--active:hover {
+        color: #FFFFFF;
+        background: rgba(0, 155, 227, 0.7); }
   .modal__time-other {
     margin-top: 85px;
     font-weight: 500;
@@ -2851,6 +2873,36 @@ input::placeholder {
   line-height: 160%;
   margin-top: 25px;
   text-align: center; }
+
+.modal-conf .modal-dialog {
+  width: calc(100% - 100px);
+  max-width: 1500px; }
+  @media screen and (max-width: 768px) {
+    .modal-conf .modal-dialog {
+      width: calc(100% - 30px); } }
+.modal-conf .modal__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 120%;
+  text-align: center; }
+.modal-conf__text h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 20px 0;
+  line-height: 130%; }
+.modal-conf__text p {
+  font-size: 22px;
+  line-height: 130%; }
+  .modal-conf__text p:not(:last-child) {
+    margin-bottom: 20px; }
+@media screen and (max-width: 992px) {
+  .modal-conf__text h3 {
+    font-size: 22px; }
+  .modal-conf__text p {
+    font-size: 18px; }
+    .modal-conf__text p:not(:last-child) {
+      margin-bottom: 15px; } }
 
 @media screen and (max-width: 992px) {
   .modal-dialog {
@@ -2882,12 +2934,22 @@ input::placeholder {
     margin-top: 50px; }
     .modal__form-group:not(:last-child) {
       margin-bottom: 32px; }
+    .modal__form-group label {
+      margin-bottom: 4px;
+      font-size: 16px; }
+    .modal__form-group input,
+    .modal__form-group .select {
+      height: 45px;
+      font-size: 16px; }
+      .modal__form-group input .current,
+      .modal__form-group .select .current {
+        font-size: 16px; }
     .modal__form-btn {
       border-radius: 5px;
       font-size: 12px;
       line-height: 1;
-      height: 38px;
-      margin-top: 50px; }
+      height: 45px;
+      margin-top: 20px; }
   .modal__calendar {
     margin-top: 50px; }
     .modal__calendar-nav {
@@ -2932,7 +2994,25 @@ input::placeholder {
         font-size: 18px;
         line-height: 22px;
         color: #009BE3;
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
+        .modal__calendar-mob-item span {
+          position: relative;
+          z-index: 2; }
+        .modal__calendar-mob-item--active {
+          position: relative;
+          color: #fff; }
+          .modal__calendar-mob-item--active:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #009BE3;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); }
   .modal__date {
     font-size: 12px;
     line-height: 15px;
@@ -2975,7 +3055,8 @@ input::placeholder {
 .content {
   flex: 1 0 auto;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow-x: hidden; }
 
 .swiper-button-prev,
 .swiper-button-next {

@@ -121,6 +121,10 @@ $(document).ready(function() {
 
     })
 
+    $(".nav__link-show").click(function() {
+        $(this).siblings(".nav__dropdown").slideToggle()
+    })
+
 
     $(".header__burger").click(function() {
         $(this).toggleClass("header__burger--active")
@@ -145,8 +149,6 @@ $(document).ready(function() {
         $(`.mob-tabs__item[data-tab-path="${path}"]`).addClass("mob-tabs__item--active")
         $(".mob-tabs__bg").removeClass("mob-tabs__bg--active")
         $(".tabs").removeClass("tabs--active")
-
-
     })
 
     $(".mob-tabs").click(function() {
